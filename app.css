@@ -1,0 +1,13 @@
+header, footer {
+    background-color: #E8590C;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+}
