@@ -1,6 +1,6 @@
 :root {
-    --color-brand: #F3A712;
-    --color-accent: #008000;
+    --color-brand: #e98a24;
+    --color-accent: #3eb308;
     --color-track: #eee;
     --bar-height: 25px;
 }
@@ -69,7 +69,7 @@ footer a {
     width: 130px;
     height: auto;
     opacity: 0;
-    animation: fade-in 1s forwards;
+    animation: fade-in 1s forwards; /* forward keep the image visibale after fade in */
     animation-delay: 2s;
 }
 
@@ -91,6 +91,7 @@ footer a {
     margin: 0 0 16px 0;
     font-size: 1.2rem;
     line-height: 1.4;
+    font-weight: bold;
 }
 
 .about-me {
@@ -98,7 +99,7 @@ footer a {
 }
 
 /* Skills */
-.skills-table th[scope="row"] {
+.skills-table th {
     font-weight: normal;
     text-align: left;
     padding-right: 16px;
@@ -114,7 +115,7 @@ footer a {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* based on own width*/
     line-height: var(--bar-height);
     color: #fff;
     font-size: 12px;
@@ -134,4 +135,36 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
     background-color: var(--color-accent);
+}
+
+
+/*mobile */
+@media (max-width: 600px) {
+
+    /* reduce width for yellow border*/
+    body {
+        border-left-width: 20px;
+        border-right-width: 20px;
+    }
+
+    /* the side-by-side row becomes a vertical stack */
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;   /* drop the 500px — no diagonal on mobile */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    /* kill the diagonal staircase: center everything instead */
+    .skills,
+    .dab-img,
+    .contact-form {
+        align-self: center;
+    }
+
+    /* keep the bars from overflowing a narrow screen */
+    progress {
+        width: 100%;
+    }
 }
