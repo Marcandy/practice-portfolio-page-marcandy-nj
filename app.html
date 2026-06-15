@@ -3,67 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="app.css">
+    <meta name="description" content="Portfolio of Marc-Andy Noel Jeune, a full stack developer based in Philadelphia.">
+    <title>Marc-Andy Noel Jeune — Full Stack Developer</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
 </head>
 <body>
 
     <header>
         <h1>Marc-Andy Noel Jeune</h1>
-        <p>Full Stack Developer</p>
+        <p class="tagline">Full Stack Developer</p>
     </header>
-    
 
-    <section>
-        <h2> About Me</h2>
-        <p> I'm Marc Andy. I'm a fullstack developer with experience in JS, React,
-            TypeScript, Python, React Native, and Java </p>
-    </section>
+    <main class="main-section">
 
-    <section class="skills">
-        <table>
-            <th>Skills Proficiency</th>
-            <tr>
-                <td>Javascript</td>
-                <td>97%</td>
-            </tr>
-            <tr> 
-                <td>React</td>
-                <td>90%</td>
-            </tr>
-            <tr> 
-                <td>NodeJS</td>
-                <td>90%</td>
-            </tr>
-            <tr> 
-                <td>Python</td>
-                <td>80%</td>
-            </tr>
-            <tr> 
-                <td>React Native</td>
-                <td>90%</td>
-            </tr>
-        </table>
-        <img src="./Dab-sticker.gif" alt="Animated dab dance" class="dab-img"/>
-    </section>
+        <section class="about-me">
+            <h2 class="section-title">About Me</h2>
+            <p>
+                I'm Marc-Andy, a full stack developer with experience in JavaScript, React,
+                TypeScript, Python, React Native, Angular, AWS, and NodeJS.
+            </p>
+            <p>
+                Currently, I'm doing consulting work with businesses in Philadelphia.
+                Here are some projects I have built:
+                <a href="https://github.com/Marcandy/crowdFunder" target="_blank" rel="noopener">CrowdFunder</a>
+                and
+                <a href="https://github.com/Marcandy/snowRider" target="_blank" rel="noopener">SnowRider</a>.
+            </p>
+        </section>
 
-    <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
+        <div class="content-row">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+            <section class="skills">
+                <table class="skills-table">
+                    <caption class="section-title">Skills Proficiency</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">JavaScript</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="99" max="100">99%</progress>
+                                    <span class="skill-label" aria-hidden="true">99%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">React</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="95" max="100">95%</progress>
+                                    <span class="skill-label" aria-hidden="true">95%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NodeJS</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="93" max="100">93%</progress>
+                                    <span class="skill-label" aria-hidden="true">93%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Python</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="85" max="100">85%</progress>
+                                    <span class="skill-label" aria-hidden="true">85%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">React Native</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="92" max="100">92%</progress>
+                                    <span class="skill-label" aria-hidden="true">92%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">AWS</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="83" max="100">83%</progress>
+                                    <span class="skill-label" aria-hidden="true">83%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">TypeScript</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="87" max="100">87%</progress>
+                                    <span class="skill-label" aria-hidden="true">87%</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NodeJS</th>
+                            <td>
+                                <div class="skill-bar">
+                                    <progress value="98" max="100">98%</progress>
+                                    <span class="skill-label" aria-hidden="true">98%</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+            <img src="./Dab-sticker.gif" alt="Animated dab dance" class="dab-img">
 
-        <button type="submit">Send</button>
-    </form>
+            <form action="#" method="post" class="contact-form">
+                <h2 class="section-title">Contact Me</h2>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+        </div>
+
+    </main>
 
     <footer>
-        &copy; 2026 Marc-Andy Noel Jeune
-        <a href="https://www.linkedin.com/in/marcandy">linkedIn</a>
+        <p>&copy; 2026 Marc-Andy Noel Jeune</p>
+        <a href="https://www.linkedin.com/in/marcandy" target="_blank" rel="noopener">LinkedIn</a>
     </footer>
+
 </body>
 </html>

@@ -1,30 +1,137 @@
-header, footer {
-    background-color: #F3A712;
-    color: white;
+:root {
+    --color-brand: #F3A712;
+    --color-accent: #008000;
+    --color-track: #eee;
+    --bar-height: 25px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* width include both padding and border*/
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    border-left: 85px solid var(--color-brand);
+    border-right: 85px solid var(--color-brand);
+}
+
+/* Header & footer */
+header,
+footer {
     padding: 20px;
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+header h1 {
+    margin-bottom: 0;
 }
 
-form {
+.tagline {
+    margin-top: 4px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+}
+
+.about-me a,
+footer a {
+    color: var(--color-accent);
+}
+
+/* Layout */
+.main-section {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    width: 100%;
+    min-height: 500px;
+    padding: 40px;
 }
 
 .skills {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    align-self: flex-start;
+    text-align: left;
 }
 
 .dab-img {
-    width: 150px;
+    align-self: center;
+    width: 130px;
     height: auto;
-    margin-right: 50px;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+.contact-form {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 430px;
+}
+
+/* Section titles */
+.section-title {
+    margin: 0 0 16px 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.about-me {
+    text-align: center;
+}
+
+/* Skills */
+.skills-table th[scope="row"] {
+    font-weight: normal;
+    text-align: left;
+    padding-right: 16px;
+}
+
+.skill-bar {
+    position: relative;
+    display: inline-block;
+}
+
+/* percentage label sits centered on top of the bar */
+.skill-label {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: var(--bar-height);
+    color: #fff;
+    font-size: 12px;
+}
+
+progress {
+    display: block;
+    width: 250px;
+    height: var(--bar-height);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--color-track);
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--color-accent);
 }
